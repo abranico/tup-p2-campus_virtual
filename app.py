@@ -28,7 +28,19 @@ estudiantes = [
 
 
 def ingresar_como_alumno():
-    pass
+    estudiante_actual = None
+    email = input("Ingrese EMAIL: ")
+    password = input("Ingrese CONTRASEÑA: ")
+    for estudiante in estudiantes:
+        if email == estudiante.email:
+            estudiante_actual = estudiante
+    if estudiante_actual:
+        if estudiante_actual.validar_credenciales(email, password):
+            return estudiante_actual
+        else:
+            print("ERROR DE INGRESO")
+    else:
+        print("Email incorrecto: Debe darse de alta en alumnado.")
 
 
 def ingresar_como_profesor():
@@ -39,14 +51,38 @@ def ver_cursos():
     pass
 
 
-while True:
+def menu_principal():
+    print("---------- MENU ----------")
     print("1. Ingresar cómo alumno")
     print("2. Ingresar cómo profesor")
     print("3. Ver cursos")
     print("4. Salir")
-    opcion = int(input("Ingrese una opcion: "))
+    return int(input("Ingrese una opcion: "))
+
+
+def menu_alumno():
+    print("---------- MENU ----------")
+    print("1. Matricularse a un curso")
+    print("2. Ver curso")
+    print("3. Volver al menú principal")
+    return int(input("Ingrese una opcion: "))
+
+
+while True:
+    opcion = menu_principal()
     if opcion == 1:
-        ingresar_como_alumno()
+        alumno = ingresar_como_alumno()
+        if alumno:
+            while True:
+                opcion = menu_alumno()
+                if opcion == 1:
+                    print(alumno)
+                elif opcion == 2:
+                    print(alumno.contrasenia)
+                elif opcion == 3:
+                    break
+                else:
+                    print("Opcion incorrecta")
     elif opcion == 2:
         ingresar_como_profesor()
     elif opcion == 3:
