@@ -14,8 +14,7 @@ def ingresar_como_alumno():
             print("ERROR DE INGRESO")
     else:
         print("Email incorrecto: Debe darse de alta en alumnado.")
-
-
+        
 def ingresar_como_profesor():
     profesor_actual = None
     email= input("Ingrese EMAIL: ")
@@ -31,12 +30,7 @@ def ingresar_como_profesor():
     else:
         print("Email incorrecto: Debe darse de alta en alumnado.")
 
-
-
-
 def ver_cursos():
     for curso in cursos:
         print(f"Materia: {curso}  Carrera: Tecnicatura Universitaria en Programación")
 
-
-ver_cursos()
