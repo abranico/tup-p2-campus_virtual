@@ -18,7 +18,21 @@ def ingresar_como_alumno():
 
 
 def ingresar_como_profesor():
-    pass
+    profesor_actual = None
+    email= input("Ingrese EMAIL: ")
+    password= input("Ingrese CONTRASEÑA: ")
+    for profesor in profesores:
+        if email== profesor.email:
+            profesor_actual=profesor
+    if profesor_actual:
+        if profesor_actual.validar_credenciales(email,password):
+            return profesor_actual
+        else:
+            print("ERROR DE INGRESO")
+    else:
+        print("Email incorrecto: Debe darse de alta en alumnado.")
+
+
 
 
 def ver_cursos():

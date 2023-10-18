@@ -44,6 +44,14 @@ def menu_alumno():
     print("3. Volver al menú principal")
     return int(input("Ingrese una opcion: "))
 
+def menu_profesor():
+    print("---------- MENU ----------")
+    print("1. Dictar curso")
+    print("2. Ver curso")
+    print("3. Volver al menu principal")
+    return int(input("Ingrese una opcion: "))
+
+
 
 while True:
     opcion = menu_principal()
@@ -61,7 +69,16 @@ while True:
                 else:
                     print("Opcion incorrecta")
     elif opcion == 2:
-        ingresar_como_profesor()
+        profesor=ingresar_como_profesor()
+        if profesor:
+            while True:
+                opcion = menu_profesor()
+                if opcion==1:
+                    pass
+                elif opcion==2:
+                    pass
+                elif opcion==3:
+                    pass
     elif opcion == 3:
         ver_cursos()
     elif opcion == 4:
