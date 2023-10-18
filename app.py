@@ -66,7 +66,7 @@ def menu_profesor():
 while True:
     opcion = menu_principal()
     if opcion == 1:
-        alumno = ingresar_como_alumno()
+        alumno = ingresar_como_alumno(estudiantes)
         if alumno:
             while True:
                 opcion = menu_alumno()
@@ -79,7 +79,7 @@ while True:
                 else:
                     print("Opcion incorrecta")
     elif opcion == 2:
-        profesor=ingresar_como_profesor()
+        profesor=ingresar_como_profesor(profesores)
         if profesor:
             while True:
                 opcion = menu_profesor()
@@ -90,7 +90,7 @@ while True:
                 elif opcion==3:
                     pass
     elif opcion == 3:
-        ver_cursos()
+        ver_cursos(cursos)
     elif opcion == 4:
         break
     else:

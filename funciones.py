@@ -1,6 +1,5 @@
-from app import estudiantes, profesores, cursos
 
-def ingresar_como_alumno():
+def ingresar_como_alumno(estudiantes):
     estudiante_actual = None
     email = input("Ingrese EMAIL: ")
     password = input("Ingrese CONTRASEÑA: ")
@@ -14,8 +13,8 @@ def ingresar_como_alumno():
             print("ERROR DE INGRESO")
     else:
         print("Email incorrecto: Debe darse de alta en alumnado.")
-        
-def ingresar_como_profesor():
+
+def ingresar_como_profesor(profesores):
     profesor_actual = None
     email= input("Ingrese EMAIL: ")
     password= input("Ingrese CONTRASEÑA: ")
@@ -30,7 +29,7 @@ def ingresar_como_profesor():
     else:
         print("Email incorrecto: Debe darse de alta en alumnado.")
 
-def ver_cursos():
+def ver_cursos(cursos):
     for curso in cursos:
         print(f"Materia: {curso}  Carrera: Tecnicatura Universitaria en Programación")
 
