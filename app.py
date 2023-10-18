@@ -33,8 +33,8 @@ cursos = [
     Curso("Ingles II", "Ds3y2"),
     Curso("Laboratorio I", "9Lom2"),
     Curso("Laboratorio II", "hH2ml"),
-    Curso(" Programación I", "mL22s"),
-    Curso(" Programación II", "912Md"),
+    Curso("Programación I", "mL22s"),
+    Curso("Programación II", "912Md"),
 ]
 
 
@@ -54,13 +54,13 @@ def menu_alumno():
     print("3. Volver al menú principal")
     return int(input("Ingrese una opcion: "))
 
+
 def menu_profesor():
     print("---------- MENU ----------")
     print("1. Dictar curso")
     print("2. Ver curso")
     print("3. Volver al menu principal")
     return int(input("Ingrese una opcion: "))
-
 
 
 while True:
@@ -79,15 +79,15 @@ while True:
                 else:
                     print("Opcion incorrecta")
     elif opcion == 2:
-        profesor=ingresar_como_profesor(profesores)
+        profesor = ingresar_como_profesor(profesores)
         if profesor:
             while True:
                 opcion = menu_profesor()
-                if opcion==1:
+                if opcion == 1:
                     nuevo_curso(cursos, Curso, profesor)
-                elif opcion==2:
+                elif opcion == 2:
                     profesor_mostrar_cursos(profesor)
-                elif opcion==3:
+                elif opcion == 3:
                     break
     elif opcion == 3:
         ver_cursos(cursos)

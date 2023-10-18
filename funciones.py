@@ -37,7 +37,7 @@ def ingresar_como_profesor(profesores):
 def ver_cursos(cursos):
     for curso in cursos:
         print(
-            f"Materia: {curso}  Carrera: Tecnicatura Universitaria en Programación")
+            f"Materia: {curso} Carrera: Tecnicatura Universitaria en Programación")
 
 
 def nuevo_curso(cursos, Curso, profesor):
@@ -54,16 +54,19 @@ def nuevo_curso(cursos, Curso, profesor):
 
 def profesor_mostrar_cursos(profesor):
     print("\n")
-    for indice, curso in enumerate(profesor.mis_cursos):
-        print(f"{indice+1} - {curso}")
-    seleccion = int(input("Seleccione un curso: "))
-    if seleccion > 0 and seleccion <= len(profesor.mis_cursos):
-        for curso in profesor.mis_cursos:
-            if curso.nombre == profesor.mis_cursos[seleccion-1].nombre:
-                print(f"Nombre: {curso.nombre}")
-                print(f"Contraseña: {curso.contrasenia}")
+    if len(profesor.mis_cursos) > 0:
+        for indice, curso in enumerate(profesor.mis_cursos):
+            print(f"{indice+1} - {curso}")
+        seleccion = int(input("Seleccione un curso: "))
+        if seleccion > 0 and seleccion <= len(profesor.mis_cursos):
+            for curso in profesor.mis_cursos:
+                if curso.nombre == profesor.mis_cursos[seleccion-1].nombre:
+                    print(f"Nombre: {curso.nombre}")
+                    print(f"Contraseña: {curso.contrasenia}")
+        else:
+            print("Curso inexistente.")
     else:
-        print("Curso inexistente.")
+        print("No hay cursos para mostrar")
 
 
 def matricularse_alumno(cursos, alumno):
@@ -91,14 +94,17 @@ def matricularse_alumno(cursos, alumno):
 
 def alumno_mostrar_curso(alumno):
     print("\n")
-    for indice, curso in enumerate(alumno.mis_cursos):
-        print(f"{indice+1} - {curso}")
+    if len(alumno.mis_cursos) > 0:
+        for indice, curso in enumerate(alumno.mis_cursos):
+            print(f"{indice+1} - {curso}")
 
-    seleccion = int(input("Seleccione un curso: "))
-    if seleccion > 0 and seleccion <= len(alumno.mis_cursos):
-        for curso in alumno.mis_cursos:
-            if curso.nombre == alumno.mis_cursos[seleccion-1].nombre:
-                print(f"Nombre: {curso.nombre}")
-                print(f"Contraseña: {curso.contrasenia}")
+        seleccion = int(input("Seleccione un curso: "))
+        if seleccion > 0 and seleccion <= len(alumno.mis_cursos):
+            for curso in alumno.mis_cursos:
+                if curso.nombre == alumno.mis_cursos[seleccion-1].nombre:
+                    print(f"Nombre: {curso.nombre}")
+                    print(f"Contraseña: {curso.contrasenia}")
+        else:
+            print("Curso inexistente.")
     else:
-        print("Curso inexistente.")
+        print("No hay cursos para mostrar")
