@@ -1,5 +1,4 @@
-from app import estudiantes, profesores
-
+from app import estudiantes, profesores, cursos
 
 def ingresar_como_alumno():
     estudiante_actual = None
@@ -22,4 +21,8 @@ def ingresar_como_profesor():
 
 
 def ver_cursos():
-    pass
+    for curso in cursos:
+        print(f"Materia: {curso}  Carrera: Tecnicatura Universitaria en Programación")
+
+
+ver_cursos()

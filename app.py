@@ -1,5 +1,6 @@
 from estudiante import Estudiante
 from profesor import Profesor
+from curso import Curso
 from funciones import *
 
 profesores = [
@@ -25,6 +26,15 @@ estudiantes = [
                "valentina@gmail.com", "contrasenia4"),
     Estudiante(5, 2018, "Facundo", "López",
                "facundo@gmail.com", "contrasenia5")
+]
+
+cursos = [
+    Curso("Ingles I", "1974"),
+    Curso("Ingles II", "1988"),
+    Curso("Laboratorio I", "1990"),
+    Curso("Laboratorio II", "1991"),
+    Curso(" Programación I", "1992"),
+    Curso(" Programación II", "2004"),
 ]
 
 
