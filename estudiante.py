@@ -7,6 +7,7 @@ class Estudiante(Usuario):
         super().__init__(nombre, apellido, email, contrasenia)
         self.__legajo = legajo
         self.__anio_inscripcion_carrera = anio_inscripcion_carrera
+        self.__mis_cursos = []
 
     def __str__(self) -> str:
         pass

@@ -7,6 +7,7 @@ class Profesor(Usuario):
         super().__init__(nombre, apellido, email, contrasenia)
         self.__titulo = titulo
         self.__anio_egreso = anio_egreso
+        self.__mis_cursos = []
 
     def __str__(self) -> str:
         pass
