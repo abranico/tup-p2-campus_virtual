@@ -29,12 +29,12 @@ estudiantes = [
 ]
 
 cursos = [
-    Curso("Ingles I", "1974"),
-    Curso("Ingles II", "1988"),
-    Curso("Laboratorio I", "1990"),
-    Curso("Laboratorio II", "1991"),
-    Curso(" Programación I", "1992"),
-    Curso(" Programación II", "2004"),
+    Curso("Ingles I", "a4e52"),
+    Curso("Ingles II", "Ds3y2"),
+    Curso("Laboratorio I", "9Lom2"),
+    Curso("Laboratorio II", "hH2ml"),
+    Curso(" Programación I", "mL22s"),
+    Curso(" Programación II", "912Md"),
 ]
 
 
@@ -84,11 +84,11 @@ while True:
             while True:
                 opcion = menu_profesor()
                 if opcion==1:
-                    pass
+                    nuevo_curso(cursos, Curso, profesor)
                 elif opcion==2:
                     pass
                 elif opcion==3:
-                    pass
+                    break
     elif opcion == 3:
         ver_cursos(cursos)
     elif opcion == 4:

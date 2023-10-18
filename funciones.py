@@ -1,3 +1,5 @@
+import random, string
+
 
 def ingresar_como_alumno(estudiantes):
     estudiante_actual = None
@@ -32,4 +34,16 @@ def ingresar_como_profesor(profesores):
 def ver_cursos(cursos):
     for curso in cursos:
         print(f"Materia: {curso}  Carrera: Tecnicatura Universitaria en Programación")
+
+def nuevo_curso(cursos, Curso, profesor):
+    nombre_curso= input("Ingrese nombre del curso nuevo: ")
+    matriculacion = ''.join(random.choice(string.ascii_letters + string.digits) for _ in range(5))
+    curso_nuevo=Curso(nombre_curso, matriculacion)
+    cursos.append(curso_nuevo)
+    profesor.dictar_curso(curso_nuevo)
+    print("El curso se agrego exitosamente.")
+    print(f"Nombre: {nombre_curso}")
+    print(f"Contraseña: {matriculacion}")
+
+
 

@@ -13,4 +13,8 @@ class Profesor(Usuario):
         pass
 
     def dictar_curso(self, curso: Curso):
-        pass
+        self.__mis_cursos.append(curso)
+    
+    @property
+    def mis_cursos(self):
+        return self.__mis_cursos
