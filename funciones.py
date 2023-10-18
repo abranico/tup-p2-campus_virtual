@@ -51,5 +51,32 @@ def profesor_mostrar_cursos(profesor):
         print(f"{indice+1} - {curso}")
 
 
+def matricularse_alumno(cursos, alumno):
+    print("\n")
+    encontrado = False
+    for indice,curso in enumerate(cursos):
+        print(f"{indice+1} - {curso}")
+    
+    seleccion = int(input("Seleccione una opcion: "))
+    if seleccion > 0 and seleccion <= len(cursos):
+        for curso in alumno.mis_cursos:
+            if curso.nombre == cursos[seleccion-1].nombre:
+                print("El alumno ya se encuentra matriculado.")
+                encontrado = True
+        if not encontrado:
+            matriculacion = input("Ingrese la clave de matriculacion: ")
+            if matriculacion == cursos[seleccion-1].contrasenia:
+                alumno.matricular_en_curso(cursos[seleccion-1])
+            else:
+                print("Clave de matriculacion incorrecta.")
+
+    else:
+        print("Curso inexistente.")
+        
+
+
+
+
+
 
 
