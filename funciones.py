@@ -9,6 +9,7 @@ def ingresar_como_alumno(estudiantes):
     for estudiante in estudiantes:
         if email == estudiante.email:
             estudiante_actual = estudiante
+            break
     if estudiante_actual:
         if estudiante_actual.validar_credenciales(email, password):
             return estudiante_actual
@@ -25,6 +26,7 @@ def ingresar_como_profesor(profesores):
     for profesor in profesores:
         if email == profesor.email:
             profesor_actual = profesor
+            break
     if profesor_actual:
         if profesor_actual.validar_credenciales(email, password):
             return profesor_actual

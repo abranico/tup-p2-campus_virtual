@@ -16,5 +16,5 @@ class Estudiante(Usuario):
         self.mis_cursos.append(curso)
 
     @property
-    def mis_cursos(self):
+    def mis_cursos(self)->list:
         return self.__mis_cursos
