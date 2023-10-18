@@ -45,5 +45,11 @@ def nuevo_curso(cursos, Curso, profesor):
     print(f"Nombre: {nombre_curso}")
     print(f"Contraseña: {matriculacion}")
 
+def profesor_mostrar_cursos(profesor):
+    print("\n")
+    for indice,curso in enumerate(profesor.mis_cursos):
+        print(f"{indice+1} - {curso}")
+
+
 
 

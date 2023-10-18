@@ -4,7 +4,7 @@ class Curso:
         self.__contrasenia_matriculacion = contrasenia_matriculacion
 
     def __str__(self) -> str:
-        return f"{self.nombre}"
+        return f"{self.nombre.title()}"
 
     def generar_contrasenia(self) -> str:
         pass

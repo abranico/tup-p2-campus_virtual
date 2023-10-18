@@ -86,7 +86,7 @@ while True:
                 if opcion==1:
                     nuevo_curso(cursos, Curso, profesor)
                 elif opcion==2:
-                    pass
+                    profesor_mostrar_cursos(profesor)
                 elif opcion==3:
                     break
     elif opcion == 3:
