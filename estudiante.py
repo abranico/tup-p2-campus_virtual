@@ -13,4 +13,8 @@ class Estudiante(Usuario):
         pass
 
     def matricular_en_curso(self, curso: Curso):
-        pass
+        self.mis_cursos.append(curso)
+
+    @property
+    def mis_cursos(self):
+        return self.__mis_cursos

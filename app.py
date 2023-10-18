@@ -71,9 +71,9 @@ while True:
             while True:
                 opcion = menu_alumno()
                 if opcion == 1:
-                    print(alumno)
+                    matricularse_alumno(cursos, alumno)
                 elif opcion == 2:
-                    print(alumno.contrasenia)
+                    alumno_mostrar_curso(alumno)
                 elif opcion == 3:
                     break
                 else:

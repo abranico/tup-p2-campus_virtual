@@ -74,9 +74,10 @@ def matricularse_alumno(cursos, alumno):
         print("Curso inexistente.")
         
 
-
-
-
+def alumno_mostrar_curso(alumno):
+    print("\n")
+    for indice,curso in enumerate(alumno.mis_cursos):
+        print(f"{indice+1} - {curso}")
 
 
 
