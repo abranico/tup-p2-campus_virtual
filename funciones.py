@@ -66,6 +66,7 @@ def mostar_cursos_de(alumno_o_profesor, esProfesor=False):
                     print(f"Nombre: {curso.nombre}")
                     if esProfesor:
                         print(f"Contraseña: {curso.contrasenia}")
+
         else:
             print("Curso inexistente.")
     else:

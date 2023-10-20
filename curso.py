@@ -5,10 +5,7 @@ import string
 class Curso:
     def __init__(self, nombre: str, contrasenia_matriculacion=None):
         self.__nombre = nombre
-
-        if contrasenia_matriculacion is None:
-            contrasenia_matriculacion = Curso.generar_contrasenia()
-        self.__contrasenia_matriculacion = contrasenia_matriculacion
+        self.__contrasenia_matriculacion = Curso.generar_contrasenia() if contrasenia_matriculacion is None else contrasenia_matriculacion
 
     def __str__(self) -> str:
         return f"{self.nombre}"
