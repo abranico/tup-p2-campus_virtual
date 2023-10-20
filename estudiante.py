@@ -9,12 +9,29 @@ class Estudiante(Usuario):
         self.__anio_inscripcion_carrera = anio_inscripcion_carrera
         self.__mis_cursos = []
 
-    def __str__(self) -> str:
-        pass
-
     def matricular_en_curso(self, curso: Curso):
         self.mis_cursos.append(curso)
 
     @property
-    def mis_cursos(self)->list:
+    def legajo(self) -> list:
+        return self.__legajo
+
+    @legajo.setter
+    def legajo(self, nueva_legajo):
+        self.__legajo = nueva_legajo
+
+    @property
+    def anio_inscripcion_carrera(self) -> list:
+        return self.__anio_inscripcion_carrera
+
+    @anio_inscripcion_carrera.setter
+    def anio_inscripcion_carrera(self, nuevo_anio):
+        self.__anio_inscripcion_carrera = nuevo_anio
+
+    @property
+    def mis_cursos(self) -> list:
         return self.__mis_cursos
+
+    @mis_cursos.setter
+    def mis_cursos(self, nueva_lista):
+        self.__mis_cursos = nueva_lista

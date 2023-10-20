@@ -9,12 +9,29 @@ class Profesor(Usuario):
         self.__anio_egreso = anio_egreso
         self.__mis_cursos = []
 
-    def __str__(self) -> str:
-        pass
-
     def dictar_curso(self, curso: Curso):
         self.__mis_cursos.append(curso)
-    
+
     @property
-    def mis_cursos(self)->list:
+    def titulo(self):
+        return self.__titulo
+
+    @titulo.setter
+    def titulo(self, nuevo_titulo):
+        self.__titulo = nuevo_titulo
+
+    @property
+    def anio_egreso(self):
+        return self.__anio_egreso
+
+    @anio_egreso.setter
+    def anio_egreso(self, nuevo_anio_egreso):
+        self.__anio_egreso = nuevo_anio_egreso
+
+    @property
+    def mis_cursos(self) -> list:
         return self.__mis_cursos
+
+    @mis_cursos.setter
+    def mis_cursos(self, nueva_lista):
+        self.__mis_cursos = nueva_lista
